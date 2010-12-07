@@ -44,6 +44,10 @@ public class AFD_Sentencias_Permitidas {
        cadenaRegla ="";
     }
 //7REGLAS NUMERICAS///
+     ///////veronica soto
+
+
+
     /**
      * @return the regla1
      */
