@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Karina
+ * @author movs_666 karys
  */
 public class Clase_Guardar_CMP  {
     

@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *Created on 20 de noviembre de 2010, 19:44
- * @author karys
+ * @author movs_666 karys
  */
 public class AnalizadorLexico {
 

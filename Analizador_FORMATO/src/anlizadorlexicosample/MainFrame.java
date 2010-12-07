@@ -8,7 +8,7 @@
  *
  * Created on 05/12/2010, 00:40:25 PM
  *
- * Karina
+ * @author movs_666 karys
  */
 
 package anlizadorlexicosample;
@@ -81,6 +81,8 @@ public class MainFrame extends javax.swing.JFrame {
         btnCopiar = new javax.swing.JButton(new DefaultEditorKit.CopyAction());
         btnPegar = new javax.swing.JButton(new DefaultEditorKit.PasteAction());
         btnCortar = new javax.swing.JButton(new DefaultEditorKit.CutAction());
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem13 = new javax.swing.JMenuItem();
@@ -277,6 +279,8 @@ public class MainFrame extends javax.swing.JFrame {
         btnCortar.setBackground(new java.awt.Color(102, 102, 255));
         btnCortar.setText("CORTAR");
 
+        jScrollPane1.setViewportView(jTextPane2);
+
         jMenuBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jMenu1.setText("ARCHIVO");
@@ -446,21 +450,20 @@ public class MainFrame extends javax.swing.JFrame {
                     .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
                         .addContainerGap()
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                                .add(btnCortar, 0, 0, Short.MAX_VALUE)
+                                .add(org.jdesktop.layout.GroupLayout.LEADING, btnCopiar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                                .add(org.jdesktop.layout.GroupLayout.LEADING, btnPegar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .add(jButton2)
+                            .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 103, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(jScrollPane1)
                             .add(layout.createSequentialGroup()
-                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                                    .add(btnCortar, 0, 0, Short.MAX_VALUE)
-                                    .add(org.jdesktop.layout.GroupLayout.LEADING, btnCopiar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
-                                    .add(org.jdesktop.layout.GroupLayout.LEADING, btnPegar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .add(18, 18, 18)
-                                .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 307, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(layout.createSequentialGroup()
-                                .add(263, 263, 263)
-                                .add(jButton2)))
-                        .add(29, 29, 29)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 103, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 343, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 307, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(29, 29, 29)
+                                .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 343, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -475,25 +478,56 @@ public class MainFrame extends javax.swing.JFrame {
                         .add(btnPegar)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(btnCortar)
-                        .addContainerGap())
+                        .add(44, 44, 44)
+                        .add(jButton2)
+                        .add(18, 18, 18)
+                        .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 35, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(242, 242, 242))
                     .add(layout.createSequentialGroup()
                         .add(23, 23, 23)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(jScrollPane4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
-                            .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 36, Short.MAX_VALUE)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jButton2)
-                            .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 35, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(21, 21, 21))))
+                            .add(jScrollPane4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
+                            .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE))
+                        .add(18, 18, 18)
+                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 109, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(33, 33, 33))))
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-812)/2, (screenSize.height-483)/2, 812, 483);
+        setBounds((screenSize.width-850)/2, (screenSize.height-613)/2, 850, 613);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    System.exit(0);
+
+        int n= JOptionPane.showConfirmDialog(null,"DESEA GUARDAR LOS CAMBIOS");
+        if (n==0){
+             FileNameExtensionFilter filtro = new FileNameExtensionFilter("Formato cmp(*.cmp)", "cmp");
+            try{
+                String nombre = "";
+                JFileChooser selector=new JFileChooser(System.getProperty("outFile"));
+                selector.setFileFilter(filtro);
+                selector.setCurrentDirectory(new File("."));
+                selector.showSaveDialog(this);
+                File GUARDAR =selector.getSelectedFile();
+                if(GUARDAR != null){
+                    nombre=selector.getSelectedFile().getAbsolutePath();
+                    if(!nombre.endsWith(".cmp"))
+                        nombre=nombre.concat(".cmp");
+                    FileWriter GUARDADO=new FileWriter(nombre);
+                    BufferedWriter bw=new BufferedWriter(GUARDADO);
+                    jTextPane1.write(bw);
+                }
+            }
+            catch(IOException exp){
+            }
+
+        }else if(n==1){
+             System.exit(0);
+        }else if (n==2){
+        
+            
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -525,34 +559,11 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void MenuItemGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemGuardarActionPerformed
-/*    FileNameExtensionFilter filtro = new FileNameExtensionFilter("formato cmp(*.cmp)", "cmp");
-        try{
-            String nombre = "";
-            File GUARDAR = new File("");
-           if (GUARDAR.exists()){
-                FileWriter GUARDADO=new FileWriter(nombre);
-                BufferedWriter bw=new BufferedWriter(GUARDADO);
-                jTextPane1.write(bw);
-           }else{
-            JFileChooser MI_ARCHIVO=new JFileChooser(System.getProperty("outFile"));
-            MI_ARCHIVO.setFileFilter(filtro);
-            MI_ARCHIVO.showSaveDialog(this);
-            GUARDAR =MI_ARCHIVO.getSelectedFile();
-            if(GUARDAR != null){
-                String na= GUARDAR.getName();
-                nombre=MI_ARCHIVO.getSelectedFile().getAbsolutePath();
-                if(!nombre.endsWith(".cmp"))
-                    nombre=nombre.concat(".cmp");
-                FileWriter GUARDADO=new FileWriter(nombre);
-                BufferedWriter bw=new BufferedWriter(GUARDADO);
 
-                jTextPane1.write(bw);
-              }
-            }
-        }
-        catch(IOException exp){
-               System.out.println(exp);
-        }*/
+
+
+
+
     }//GEN-LAST:event_MenuItemGuardarActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -582,12 +593,14 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNuevoActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-    // JOptionPane.showMessageDialog(this, "CAMBIOS GUARDADOS");
-   //   JOptionPane.showMessageDialog(null, "Campos Obligatorios Vacios", "CAMPOS VACIOS", JOptionPane.showConfirmDialog(YES, evt, null, WIDTH, WIDTH, null));
+    // JOptionPane.showMessageDialog(null, "Campos Obligatorios Vacios", "CAMPOS VACIOS", JOptionPane.showConfirmDialog(YES, evt, null, WIDTH, WIDTH, null));
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnVistaPreliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVistaPreliminarActionPerformed
-        
+
+        new Vista_Previa(jTextPane1.getText()).setVisible(true);
+
+
 }//GEN-LAST:event_btnVistaPreliminarActionPerformed
 
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
@@ -666,7 +679,13 @@ public class MainFrame extends javax.swing.JFrame {
         tabla1.setModel(new DefaultTableModel(
                 datos,new String [] {"Tokens", "Lexema"
         }
-        ));
+        
+
+        ))
+        ;
+        AFD afd= new AFD();
+        String sentencia = afd.sentencias();
+        jTextPane2.setText(sentencia +"\n");
     }//GEN-LAST:event_jTextPane1KeyReleased
 
     private void metodoCopiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_metodoCopiarActionPerformed
@@ -723,7 +742,7 @@ public class MainFrame extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainFrame().setVisible(true);
+                new Presentacion().setVisible(true);
             }
         });
     }
@@ -762,9 +781,11 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane2;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JMenuItem metodoCopiar;
     private javax.swing.JMenuItem metodoCortar;

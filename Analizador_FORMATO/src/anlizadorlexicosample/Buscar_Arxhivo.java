@@ -11,6 +11,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextPane;
 import javax.swing.text.Caret;
 
+
+ //* @author movs_666 karys
+
+
 public class Buscar_Arxhivo extends JFrame{
 
     //variable gloval tipo String contendra la cadena a buscar

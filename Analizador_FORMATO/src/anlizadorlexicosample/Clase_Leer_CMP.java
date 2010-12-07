@@ -13,7 +13,7 @@ import java.io.IOException;
 
 /**
  *
- * @author Karina
+ * @author movs_666 karys
  */
 public class Clase_Leer_CMP {
 
