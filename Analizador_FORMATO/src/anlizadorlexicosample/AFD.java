@@ -35,7 +35,7 @@ public class AFD {
     public static void setCadena(String cadena) {
         cadenas  = cadena;
     }
-
+     /// SE DEFINE VARIOS TOKENS MAS PARA DETERMINAR LAS REGLAS LEXICAS
 
     public enum TOKEN {NUMERO,ERROR,RESERVADA,OPERADOR,VARIABLE,FECHAVALIDA, FECHAINVALIDA,
                         OPERADOR_iGUAL,OPERADOR_MATEMATICO,PUNTO_COMA,PARENTESIS_1,PARENTESIS_2};
@@ -80,7 +80,12 @@ public class AFD {
                 af_numero.setNumero(7);
                 af_numero.setCadenaRegla("per");
             }else if (new AFD_Punto_Coma().punto_Coma(token)!=TOKEN.ERROR){
-               lex.addLexico(new Lexico(new AFD_Punto_Coma().punto_Coma(token), token));
+
+                ////EN EL MOMENTO EN QUE SE DETECTA UN PUNTO Y COMA SE LIMTA LA SENTENCIA PARA PODER SER
+                ///ANALIZADA CON LAS REGLAS DEL AFD_Sentencias_Permitidas
+                ///esta clase llama al metodo sentencias ()  el cual compara la
+                ////sentencia ingresada con las reglas ya definidas
+                lex.addLexico(new Lexico(new AFD_Punto_Coma().punto_Coma(token), token));
                af_numero.setCadenaRegla(";");
 
                 af_numero.setNumero(30);
