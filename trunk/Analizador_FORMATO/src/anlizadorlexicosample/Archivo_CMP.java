@@ -10,7 +10,7 @@ import javax.swing.filechooser.FileFilter;
 
 /**
  *
- * @author Karina
+  * @author movs_666 karys
  */
 public class Archivo_CMP extends FileFilter {
 

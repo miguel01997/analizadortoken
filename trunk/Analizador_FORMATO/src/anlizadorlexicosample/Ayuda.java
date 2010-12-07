@@ -13,7 +13,7 @@ package anlizadorlexicosample;
 
 /**
  *
- * @author 
+ * @author movs_666 karys
  */
 public class Ayuda extends javax.swing.JFrame {
 

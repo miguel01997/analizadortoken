@@ -7,7 +7,7 @@ package anlizadorlexicosample;
 
 /**
  *
- * @author Karina
+  * @author movs_666 karys
  */
 public class Editar {
 

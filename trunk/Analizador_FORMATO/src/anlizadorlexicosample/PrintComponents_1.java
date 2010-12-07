@@ -7,6 +7,8 @@ import javax.swing.JTextPane;
 import java.awt.print.*;
 
 
+ //* @author movs_666 karys
+
 public class PrintComponents_1 {
 
     JTextPane jp;

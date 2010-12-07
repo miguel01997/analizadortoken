@@ -10,7 +10,7 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 
 /**
- * @author Karina
+ * @author movs_666 karys
  */
 public class Color_texto {
 

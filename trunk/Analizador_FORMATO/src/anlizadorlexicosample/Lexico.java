@@ -9,7 +9,7 @@ import anlizadorlexicosample.AFD.TOKEN;
 
 /**
  *
- * @author edison
+  * @author movs_666 karys
  */
 public class Lexico {
 
