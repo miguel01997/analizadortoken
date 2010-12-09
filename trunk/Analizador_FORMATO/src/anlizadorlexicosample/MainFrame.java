@@ -559,11 +559,6 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void MenuItemGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemGuardarActionPerformed
-
-
-
-
-
     }//GEN-LAST:event_MenuItemGuardarActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -650,9 +645,9 @@ public class MainFrame extends javax.swing.JFrame {
         Buscar_Arxhivo txtBusca= new Buscar_Arxhivo();
         txtBusca.Buscar(jTextPane1);
     }//GEN-LAST:event_jButton3ActionPerformed
-
+// Diana Amay//
     private void jTextPane1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextPane1KeyReleased
-     AnalizadorLexico al= new AnalizadorLexico();
+        AnalizadorLexico al= new AnalizadorLexico();
         al.crearTokens(jTextPane1.getText().toString());
         int offset=0;
         List<Lexico> lista =al.getLexicos();
