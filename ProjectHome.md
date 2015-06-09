@@ -1,0 +1,1 @@
+reconoce variables,palabras reservadas,identificadores, operadores y analizador sintactico
